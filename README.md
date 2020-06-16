@@ -38,4 +38,10 @@ Since the selected genes should contain the essential information in the dataset
 
 ## Prerequisites
 
-You need a Jupyter Server with a running R kernel. Assuming that you have a running R intallation, the imo easiest approach is to first install [Julia](https://www.julialang.org/downloads/), adding the directory with the Julia executable to your ```PATH```, and then install [IJulia](https://github.com/JuliaLang/IJulia.jl). Afterwards you can [install](https://github.com/IRkernel/IRkernel) the R kernel and run the Jupyter server.  
+To run the Notebook, you need a Jupyter Server with a running R kernel. Assuming that you have a working R installation, but no Jupyter notebook server installed, one approach is to first install [Julia](https://www.julialang.org/downloads/), adding the directory with the Julia executable to your ```PATH```, then install [IJulia](https://github.com/JuliaLang/IJulia.jl) and run
+```julia 
+using IJulia
+notebook()
+```
+This will install the Jupyter server components via Conda.
+Afterwards you can install the [R kernel](https://github.com/IRkernel/IRkernel) and restart the Jupyter server either via Julia or from the command line. Please make shure that you add the folder with the Jupyter binaries to your ```PATH```, since otherwise, the R kernel will fail to install.
