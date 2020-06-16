@@ -27,7 +27,7 @@ The software to train DBMs [BoltzmannMachines.jl](https://github.com/stefan-m-le
 
 ### 1. Loading and processing the data
 
-We load the expression data using R. We use publically available scRNA-Seq data, published by Tasic et al. (2016).
+We load the expression data using R. We use publically available scRNA-Seq data, published by [Tasic et al. (2016)](https://www.nature.com/articles/nn.4216).
 
 ### 2. Extract information carrying genes with deep Boltzmann machines and log-linear models using Julia and the JuliaConnectoR
 We employ deep-learning techniques and techniques to extract information from trained models. Specifically, we employ deep generative methods, such as DBMs which learn the joint distribution in the data. I.e. we are dealing with unsupervised techniques. From a trained DBM we generate synthetic data for observed and latent variables. Based on joint patterns between latent variables and observed variables, we infer the information carrying observed variables. All employed methods are implemented in Julia for sake of speed. To employ these in R, we employ the [JuliaConnectoR](https://cran.r-project.org/web/packages/JuliaConnectoR/index.html), written by [Stefan Lenz](https://github.com/stefan-m-lenz).
