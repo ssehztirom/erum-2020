@@ -1,0 +1,5 @@
+[deps]
+BoltzmannMachines = "4f8fbe5d-35a6-506b-99b3-b5866748635b"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+LogLinearModels = "a6fe36b8-2c63-11e9-27e7-4748cfc3a0e4"
+PatternsByLogLin = "4b7e11da-2cb0-11e9-162e-7955b596387e"
