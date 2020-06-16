@@ -17,9 +17,9 @@ Here we perform the analyses as presented in our talk at the eRUM. Our aim is:
 
 2. to demonstrate the ease with which algorithms implemented in the programming language [Julia](julialang.org) can be leveraged for accessible deep learning applications in R.
 
-Specifically [deep Boltzmann machines (DBMs)](http://www.cs.toronto.edu/~fritz/absps/dbm.pdf), which are deep generative models, are employed for learning the joint distribution of the observed variables (the genes; $x$) and latent variables (in $u$ and $h_{1}$), capturing non-linear dependencies in the data ($X$). 
+Specifically [deep Boltzmann machines (DBMs)](http://www.cs.toronto.edu/~fritz/absps/dbm.pdf), which are deep generative models, are employed for learning the joint distribution of the observed variables (the genes; x) and latent variables (in u and h_1), capturing non-linear dependencies in the data (X). 
 ![dbm_joint.png](dbm_joint.png)
-This joint distribution is then investigated with log-linear models to infer joint patterns between the states of a subset of the latent variables ($U^{syn}$) and observed variables ($X^{syn}$), sampled from a trained DBM (examples for $U^{syn}$ and $X^{syn}$ are shown on the right-hand of the figure).
+This joint distribution is then investigated with log-linear models to infer joint patterns between the states of a subset of the latent variables (U^syn) and observed variables (X^syn), sampled from a trained DBM (examples for U^syn and X^syn are shown on the right-hand of the figure).
 
 The software to train DBMs [BoltzmannMachines.jl](https://github.com/stefan-m-lenz/BoltzmannMachines.jl) and to fit log-linear models was implemented in Julia for [speed reasons](https://julialang.org/benchmarks/). The [JuliaConnectorR](https://github.com/stefan-m-lenz/JuliaConnectoR) is employed for rendering the above stated functionalities accessible in R.  
 
