@@ -46,6 +46,6 @@ notebook()
 This will install the Jupyter server components via Conda.
 Afterwards you can install the [R kernel](https://github.com/IRkernel/IRkernel) and restart the Jupyter server either via Julia or from the command line. Please make shure that you add the folder with the Jupyter binaries to your ```PATH```, since otherwise, the R kernel will fail to install. If you are running the Notebook server on a server without display (but have configured for cairo support) you might have to add the following
 ```
-{ "argv": ["[/PATHOFYOURRINSTALLATION/lib/R/bin/R", "--slave", "-e", "options(bitmapType='cairo') ; IRkernel::main()", "--args", "{connection_file}"], "display_name": "R", "language": "R" }
+{ "argv": ["[/PATHOFYOURRINSTALLATION/bin/R", "--slave", "-e", "options(bitmapType='cairo') ; IRkernel::main()", "--args", "{connection_file}"], "display_name": "R", "language": "R" }
 ```
 to ```/YOURHOME/.local/share/jupyter/kernels/ir/kernel.json```.
